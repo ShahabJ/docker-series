@@ -20,8 +20,4 @@ WORKDIR /publish
 
 COPY --from=build-image /publish .
 
-COPY --from=build-image /TestResults /TestResults
-
-ENV TEAMCITY_PROJECT_NAME = ${TEAMCITY_PROJECT_NAME}
-
 ENTRYPOINT ["dotnet", "AccountOwnerServer.dll"]

@@ -1,4 +1,4 @@
-node('docker-agent') {
+node('worker') {
 
     stage 'Checkout'
         checkout scm
